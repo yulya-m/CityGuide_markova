@@ -4,9 +4,65 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CityGuide29.Markova.View.Items"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             mc:Ignorable="d" FontFamily="Bahnschrift Light Condensed">
+    <Grid Margin="10" Background="White">
+        <Grid Margin="10,10,10,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Название:"
+                   Grid.Column="0"
+                   Margin="0,0,10,0"/>
+            <TextBox
+                Text="{Binding Name}"
+                Grid.Column="1"/>
+        </Grid>
+        <Grid Margin="10,45,10,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Страна:"
+                   Grid.Column="0"
+                   Margin="0,0,10,0"/>
+            <TextBox
+                Text="{Binding Country}"
+                Grid.Column="1"/>
+        </Grid>
+        <Grid Margin="10,80,10,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Описание:"
+                   Grid.Column="0"
+                   Margin="0,0,10,0"/>
+            <TextBox
+                Text="{Binding Description}"
+                Grid.Column="1"/>
+        </Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,120,10,10">
+            <Button
+                Content="Изменить"
+                Command="{Binding OnEdit}"
+                Background="#FF4A90D9"
+                Foreground="White"
+                Margin="0,0,5,0"
+                Width="70"/>
+            <Button
+                Content="Сохранить"
+                Command="{Binding OnSave}"
+                Background="#FF2ECC71"
+                Foreground="White"
+                Margin="0,0,5,0"
+                Width="70"/>
+            <Button
+                Content="Удалить"
+                Command="{Binding OnEdit}"
+                Background="#FFE74C3C"
+                Foreground="White"
+                Width="70"/>
+        </StackPanel>
     </Grid>
 </UserControl>
