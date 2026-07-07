@@ -1,15 +1,10 @@
 ﻿using CityGuide29.Markova.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace CityGuide29.Markova.Models
 {
-    public class Attraction : Notification
+	public class Attraction : Notification
     {
         public int Id { get; set; }
 		private string _name;

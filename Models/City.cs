@@ -88,6 +88,7 @@ namespace CityGuide29.Markova.Models
 				else return "Изменить";
 			}
 		}
+		public virtual ICollection<Attraction> Attractions { get; set; } = new List<Attraction>();
 		[Schema.NotMapped]
 		public RealyCommand OnEdit
 		{
